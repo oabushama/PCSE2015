@@ -1,0 +1,3 @@
+mpif90 -openmp -o hello_hybrid_f hello_hybrid.F90 
+mpicc  -openmp -o hello_hybrid_c hello_hybrid.c
+

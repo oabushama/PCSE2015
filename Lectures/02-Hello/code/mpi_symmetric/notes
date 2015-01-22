@@ -1,0 +1,4 @@
+mpif90 -xhost -o hello_mpi_symmetric_f.cpu hello_mpi_symmetric.F90 
+mpif90 -mmic  -o hello_mpi_symmetric_f.mic hello_mpi_symmetric.F90 
+mpicc  -xhost -o hello_mpi_symmetric_c.cpu hello_mpi_symmetric.c
+mpicc  -mmic  -o hello_mpi_symmetric_c.mic hello_mpi_symmetric.c

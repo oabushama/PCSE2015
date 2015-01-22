@@ -1,0 +1,3 @@
+mpif90 -o hello_mpi_f hello_mpi.F90 
+mpicc  -o hello_mpi_c hello_mpi.c
+

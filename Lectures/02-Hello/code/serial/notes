@@ -1,0 +1,2 @@
+ifort -o hello_f hello.F90
+icc   -o hello_c hello.c

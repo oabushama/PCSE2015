@@ -1,0 +1,2 @@
+ifort -openmp -o hello_offload_omp_f hello_offload_omp.F90 
+icc   -openmp -o hello_offload_omp_c hello_offload_omp.c
