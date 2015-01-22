@@ -9,6 +9,6 @@
 
 
 export OMP_NUM_THREADS=1
-exoprt MIC_OMP_NUM_THREADS=1
+export MIC_OMP_NUM_THREADS=1
 
 ibrun ./a.out
