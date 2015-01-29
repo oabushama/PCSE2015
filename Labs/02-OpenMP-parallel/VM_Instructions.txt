@@ -1,0 +1,6 @@
+
+1.)Go to the new, final VDI web address:  http://vdi.tacc.utexas.edu
+2.)It should automatically, anonymously log you in to the connection broker.  You will see an icon labeled CentosTest1.
+3.) When you click on the Centos icon it should then eventually open the vWorkspace software.  It should take you to a blue Dell login screen.  Enter your username and password as student / hookem.  From there you should see a standard Centos desktop appear.  When you are done, just logout like you would at a real computer.
+4.) Open up a terminal.
+5.) ssh username@tacc.utexas.edu
