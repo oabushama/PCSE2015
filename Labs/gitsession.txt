@@ -1,0 +1,38 @@
+
+staff.stampede(13)$ mkdir pcse15testdir
+staff.stampede(14)$ cd !$
+cd pcse15testdir
+staff.stampede(15)$ git init
+Initialized empty Git repository in /admin/build/pcse15testdir/.git/
+##
+## Note:
+## 1. use https
+## 2. slash after "bitbucket.org"
+## 3. replace "VictorEijkhout" with your own bitbucket name
+## 4. use your own "repo-name.git"
+## 
+staff.stampede(16)$ git remote add origin https://VictorEijkhout@bitbucket.org/VictorEijkhout/pcse15test.git
+staff.stampede(17)$ echo "first line" > firstfile
+staff.stampede(18)$ git status .
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	firstfile
+nothing added to commit but untracked files present (use "git add" to track)
+staff.stampede(19)$ git add firstfile
+staff.stampede(20)$ git commit -m "adding first file"
+[master (root-commit) e09253e] adding first file
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 firstfile
+staff.stampede(21)$ git push origin master
+Password: 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 229 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://VictorEijkhout@bitbucket.org/VictorEijkhout/pcse15test.git
+ * [new branch]      master -> master
+staff.stampede(22)$ 
