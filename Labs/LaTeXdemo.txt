@@ -1,0 +1,520 @@
+Last login: Thu Feb 12 09:55:07 on ttys005
+You have new mail.
+[~:1] test
+[~:2] mkdir TeXtest
+[~:3] cd !$
+cd TeXtest
+[TeXtest:4] emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:5] cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+Hello world!
+
+\end{document}
+[TeXtest:6] pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+No file pcse.aux.
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on pcse.pdf (1 page, 11937 bytes).
+Transcript written on pcse.log.
+[TeXtest:7] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:8] !cat
+cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+Hello world! $\int_0_1 dx$ Is an equation
+
+Another equation:
+\[ \int_0_1 dx \]
+
+\end{document}
+[TeXtest:9] !pdf
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+! Double subscript.
+l.4 Hello world! $\int_0_
+                         1 dx$ Is an equation
+? x
+No pages of output.
+Transcript written on pcse.log.
+[TeXtest:10] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:11] pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+! Double subscript.
+l.4 Hello world! $\int_0_
+                         1 dx$ Is an equation
+? x
+No pages of output.
+Transcript written on pcse.log.
+[TeXtest:12] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:13] !pd
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on pcse.pdf (1 page, 36429 bytes).
+Transcript written on pcse.log.
+[TeXtest:14] !cat
+cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+
+\end{document}
+[TeXtest:15] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:16] !cat
+cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+
+\section{Introduction}
+
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+
+\section{Conclusion}
+
+We have just seen a \LaTeX\ document.
+
+\end{document}
+[TeXtest:17] !pd
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on pcse.pdf (1 page, 48120 bytes).
+Transcript written on pcse.log.
+[TeXtest:18] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:19] !cat
+cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+
+\section{Introduction}
+
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+will be discussed in section~\ref{sec:conclusion}.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have just seen a \LaTeX\ document.
+
+\end{document}
+[TeXtest:20] !pd
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+
+LaTeX Warning: Reference `sec:conclusion' on page 1 undefined on input line 11.
+
+
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
+pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/lo
+cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on pcse.pdf (1 page, 57201 bytes).
+Transcript written on pcse.log.
+[TeXtest:21] !!
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo)) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on pcse.pdf (1 page, 48539 bytes).
+Transcript written on pcse.log.
+[TeXtest:22] !c
+cat pcse.tex 
+\documentclass{article}
+
+\begin{document}
+
+\section{Introduction}
+
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+will be discussed in section~\ref{sec:conclusion}.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have just seen a \LaTeX\ document.
+
+\end{document}
+[TeXtest:23] # format twice to get references right
+[TeXtest:23] cat > code.c
+int main() {
+ return;
+}
+[TeXtest:24] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:25] !p
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></o
+pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/lo
+cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pcse.pdf (1 page, 57239 bytes).
+Transcript written on pcse.log.
+[TeXtest:26] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:27] ls
+#pcse.tex#	pcse.aux	pcse.pdf	pcse.tex~
+code.c		pcse.log	pcse.tex
+[TeXtest:28] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:29] !p
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pcse.pdf (1 page, 61564 bytes).
+Transcript written on pcse.log.
+[TeXtest:30] cat pcse.tex
+\documentclass{article}
+
+% the next line allows me to add verbatim text
+\usepackage{verbatim}
+
+\begin{document}
+
+\section{Introduction}
+
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+will be discussed in section~\ref{sec:conclusion}.
+\section{Code}
+
+Here is some code
+\begin{verbatim}
+@#$@#%#$^#$@#$@
+\end{verbatim}
+
+And here is an included file:
+\verbatiminput{code.c}
+See?
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have just seen a \LaTeX\ document.
+
+\end{document}
+[TeXtest:31] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:32] !pdf
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pcse.pdf (1 page, 63555 bytes).
+Transcript written on pcse.log.
+[TeXtest:33] !ca
+cat pcse.tex
+\documentclass{article}
+
+% the next line allows me to add verbatim text
+\usepackage{verbatim}
+
+\begin{document}
+
+\section{Introduction}
+
+Hello world! $\int_0^1 dx$ Is an equation
+
+Another equation:
+\[ \int_0^1 dx \]
+will be discussed in section~\ref{sec:conclusion}.
+\section{Code}
+
+Here is some code
+\begin{verbatim}
+@#$@#%#$^#$@#$@
+\end{verbatim}
+
+And here is an included file:
+\verbatiminput{code.c}
+See?
+
+\subsection{Results}
+
+\begin{tabular}{|c|c|}
+  1 proc & 12.3\\
+  4 procs& 7.5\\
+  8 procs& 3.7\\
+\end{tabular}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have just seen a \LaTeX\ document.
+
+\end{document}
+[TeXtest:34] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:35] !pdf
+pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pcse.pdf (1 page, 63552 bytes).
+Transcript written on pcse.log.
+[TeXtest:36] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:37] pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) )<
+/opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/
+local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pcse.pdf (1 page, 63578 bytes).
+Transcript written on pcse.log.
+[TeXtest:38] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:39] pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/pslatex/pslatex.sty)
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omspzccm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/ot1ptmcm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omlptmcm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omxpsycm.fd) [1{/opt/local/var
+/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) ){/opt/local/share/
+texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share/texmf-texlive/fonts
+/type1/public/amsfonts/cmextra/cmex9.pfb></opt/local/share/texmf-texlive/fonts/
+type1/urw/courier/ucrr8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/ti
+mes/utmb8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb
+></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on pcse.pdf (1 page, 45806 bytes).
+Transcript written on pcse.log.
+[TeXtest:40] fg
+emacs -nw pcse.tex
+
+[1]+  Stopped                 emacs -nw pcse.tex
+[TeXtest:41] pdflatex pcse
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_6) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./pcse.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 50 languages loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/fleqn.clo)
+(/opt/local/share/texmf-texlive/tex/latex/base/size10.clo))
+(/opt/local/share/texmf-texlive/tex/latex/pslatex/pslatex.sty)
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty) (./pcse.aux)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omspzccm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/ot1ptmcm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omlptmcm.fd)
+(/opt/local/share/texmf-texlive/tex/latex/psnfss/omxpsycm.fd) [1{/opt/local/var
+/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pcse.aux) ){/opt/local/share/
+texmf-texlive/fonts/enc/dvips/base/8r.enc}</opt/local/share/texmf-texlive/fonts
+/type1/public/amsfonts/cmextra/cmex9.pfb></opt/local/share/texmf-texlive/fonts/
+type1/urw/courier/ucrr8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/ti
+mes/utmb8a.pfb></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb
+></opt/local/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on pcse.pdf (1 page, 45805 bytes).
+Transcript written on pcse.log.
+[TeXtest:42] 
