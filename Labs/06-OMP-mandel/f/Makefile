@@ -40,13 +40,14 @@ CXX = ${CXX_${TACC_FAMILY_COMPILER}}
 CFLAGS = ${OMPFLAGS} -O${OPTLEVEL}
 CXXFLAGS = ${CFLAGS}
 F90_gcc   = gfortran
-F90_intel = gfortran
+F90_intel = icpc
 F90 = ${F90_${TACC_FAMILY_COMPILER}}
 FC_gcc    = gfortran
 FC_intel  = ifort
 FC = ${FC_${TACC_FAMILY_COMPILER}}
 FFLAGS = -g -O${OPTLEVEL} ${OMPFLAGS}
-LDFLAGS_gcc = -lstdc++ -lc
+LDFLAGS_gcc   = -lstdc++ -lc
+LDFLAGS_intel = -lstdc++ -lc
 LDFLAGS = ${LDFLAGS_${TACC_FAMILY_COMPILER}}
 
 %.o : %.cxx
