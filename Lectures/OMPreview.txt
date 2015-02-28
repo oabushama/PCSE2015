@@ -1,0 +1,52 @@
+==== Concepts
+
+process / thread / thread team
+
+threads / cores / tasks
+
+directives / library functions / environment variables
+
+==== Parallel regions
+
+execution by a team
+
+==== Work sharing
+
+loop / sections / single / workshare
+
+implied barrier
+
+loop scheduling, reduction
+
+sections
+
+single vs master
+
+(F) workshare
+
+==== Data scope
+
+shared vs private, C vs F
+
+loop variables and reduction variables
+
+default declaration
+
+firstprivate, lastprivate
+
+==== Synchronization
+
+barriers, implied & explicit
+
+nowait
+
+critical sections
+
+locks, difference with critical
+
+==== Tasks
+
+generation vs execution
+
+dependencies
+
