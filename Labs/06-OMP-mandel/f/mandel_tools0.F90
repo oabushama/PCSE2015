@@ -37,28 +37,29 @@ contains
     integer,intent(in) :: steps_v,bound_v
 
     step = 2./steps_v ; bound = bound_v
-    ymin = -2.; ymax = +2.; ycur = ymin
-    xmax = sqrt(4-ycur*ycur); xmin = -xmax; xcur = xmin
+    xmin = -2.; xmax = +2.; xcur = xmin
+    ymax = sqrt(4-xcur*xcur); ymin = -ymax; ycur = ymin
 
   end subroutine SetParameters
   
-  type(coordinate) function InvalidCoordinate()
-    implicit none
-    InvalidCoordinate%x = -5.; InvalidCoordinate%y = -5.
-  end function InvalidCoordinate
-  
   type(coordinate) function NextCoordinate()
     implicit none
-    if (xcur<xmax-step) then
-       NextCoordinate%x = xcur; NextCoordinate%y = ycur; xcur = xcur+step
-    else if (ycur<ymax-step) then
-       ycur = ycur+step; xmax = sqrt(4-ycur*ycur); xmin = -xmax; xcur = xmin
+    if (ycur<ymax-step) then
+       NextCoordinate%x = xcur; NextCoordinate%y = ycur; ycur = ycur+step
+    else if (xcur<xmax-step) then
+       xcur = xcur+step
+       ymax = sqrt(4-xcur*xcur); ymin = -ymax; ycur = ymin
        NextCoordinate%x = xcur; NextCoordinate%y = ycur; xcur = xcur+step
     else
        NextCoordinate = InvalidCoordinate()
     end if
   end function NextCoordinate
 
+  type(coordinate) function InvalidCoordinate()
+    implicit none
+    InvalidCoordinate%x = -5.; InvalidCoordinate%y = -5.
+  end function InvalidCoordinate
+  
   Logical function IsValidCoordinate(xy)
     type(coordinate),intent(in) :: xy
     if ( (xy%x<-3.) .and. (xy%y<-3.) ) then
