@@ -1,0 +1,9 @@
+  do i=0, numprocs-1
+    if(rank == i)then
+      write(*,'(a,i0,a)')"***(Rank ",rank,"): local_vec Output:"
+      do j = 1, ASIZEPP
+        write(*,"(2(a,i0),f10.2)")"(Rank ",rank,"): ",j,local_vec(j)
+      end do
+    end if
+    call MPI_BARRIER(MPI_COMM_WORLD,ierr)
+  end do

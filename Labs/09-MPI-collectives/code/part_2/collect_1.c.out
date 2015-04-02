@@ -1,0 +1,65 @@
+TACC: Starting up job 5057379
+TACC: Setting up parallel environment for MVAPICH2+mpispawn.
+TACC: Starting parallel tasks...
+***(Rank 0): local_vec Output:
+(Rank 0): 0 100.000000
+(Rank 0): 1 100.000000
+***(Rank 1): local_vec Output:
+(Rank 1): 0 101.000000
+(Rank 1): 1 101.000000
+***(Rank 2): local_vec Output:
+(Rank 2): 0 102.000000
+(Rank 2): 1 102.000000
+***(Rank 3): local_vec Output:
+(Rank 3): 0 103.000000
+(Rank 3): 1 103.000000
+***(Rank 0): master_vec Output:
+(Rank 0): 0 -1.000000
+(Rank 0): 1 -1.000000
+(Rank 0): 2 -1.000000
+(Rank 0): 3 -1.000000
+(Rank 0): 4 -1.000000
+(Rank 0): 5 -1.000000
+(Rank 0): 6 -1.000000
+(Rank 0): 7 -1.000000
+(Rank 0): The ROOT process is: 2
+(Rank 0): Root            Sum: 0.000000
+(Rank 0): MPI_Reduce      Sum: 0.000000
+***(Rank 1): master_vec Output:
+(Rank 1): 0 -1.000000
+(Rank 1): 1 -1.000000
+(Rank 1): 2 -1.000000
+(Rank 1): 3 -1.000000
+(Rank 1): 4 -1.000000
+(Rank 1): 5 -1.000000
+(Rank 1): 6 -1.000000
+(Rank 1): 7 -1.000000
+(Rank 1): The ROOT process is: 2
+(Rank 1): Root            Sum: 0.000000
+(Rank 1): MPI_Reduce      Sum: 0.000000
+***(Rank 2): master_vec Output:
+(Rank 2): 0 100.000000
+(Rank 2): 1 100.000000
+(Rank 2): 2 101.000000
+(Rank 2): 3 101.000000
+(Rank 2): 4 102.000000
+(Rank 2): 5 102.000000
+(Rank 2): 6 103.000000
+(Rank 2): 7 103.000000
+(Rank 2): The ROOT process is: 2
+(Rank 2): Root            Sum: 812.000000
+(Rank 2): MPI_Reduce      Sum: 812.000000
+***(Rank 3): master_vec Output:
+(Rank 3): 0 -1.000000
+(Rank 3): 1 -1.000000
+(Rank 3): 2 -1.000000
+(Rank 3): 3 -1.000000
+(Rank 3): 4 -1.000000
+(Rank 3): 5 -1.000000
+(Rank 3): 6 -1.000000
+(Rank 3): 7 -1.000000
+(Rank 3): The ROOT process is: 2
+(Rank 3): Root            Sum: 0.000000
+(Rank 3): MPI_Reduce      Sum: 0.000000
+ 
+TACC: Shutdown complete. Exiting.

@@ -1,0 +1,9 @@
+  for(i=0; i<numprocs; i++){
+    if(rank == i){
+      printf("***(Rank %i): local_vec Output:\n",rank);
+      for(j = 0; j < ASIZEPP; j++){
+        printf("(Rank %i): %i %f\n",rank,j,local_vec[j]);
+      }
+    }
+    MPI_Barrier(MPI_COMM_WORLD);
+  }
