@@ -26,13 +26,13 @@ int main(int argc, char *argv[]) {
   tag2 = 67;
   if (rank == 0){
     dest = 1; src = 1;
-    MPI_Sendrecv (&my_sleep_time,1,MPI_DOUBLE,src,tag1, 
-                  &their_sleep_time,1,MPI_DOUBLE,dest,tag2, 
+    MPI_Sendrecv (&my_sleep_time,1,MPI_DOUBLE,dest,tag1, 
+                  &their_sleep_time,1,MPI_DOUBLE,src,tag2, 
                   MPI_COMM_WORLD,&Stat);
   } else if (rank == 1) {
     src = 0; dest = 0;
-    MPI_Sendrecv (&my_sleep_time,1,MPI_DOUBLE,src,tag2, 
-                  &their_sleep_time,1,MPI_DOUBLE,dest,tag1, 
+    MPI_Sendrecv (&my_sleep_time,1,MPI_DOUBLE,dest,tag2, 
+                  &their_sleep_time,1,MPI_DOUBLE,src,tag1, 
                   MPI_COMM_WORLD,&Stat);
   }
   printf ("My rank= %d Running on %s: Their Sleep %f\n",
