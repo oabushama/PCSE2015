@@ -11,7 +11,6 @@
    Of course this is very silly, but it only serves to
    provide a code base.
  */
-#pragma serialaddtask
 class serialqueue : public queue {
 private :
   int free_processor;
@@ -43,7 +42,6 @@ public :
 
     return 0;
   };
-#pragma end
 };
 
 int main(int argc,char **argv) {
@@ -56,11 +54,9 @@ int main(int argc,char **argv) {
   MPI_Comm_size(comm,&ntids);
   MPI_Comm_rank(comm,&mytid);
 
-#pragma mandelargs
   ierr = parameters_from_commandline
     (argc,argv,comm,&steps,&iters);
   if (ierr) return MPI_Abort(comm,1);
-#pragma end
 
   if (ntids==1) {
     printf("Sorry, you need at least two processors\n");
