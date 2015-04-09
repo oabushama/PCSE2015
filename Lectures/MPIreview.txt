@@ -1,0 +1,71 @@
+Communication Types:
+Point-to-Point
+Collectives
+
+Basic Communication Modes:
+Blocking
+Non-blocking
+
+MPI
+Order
+Fairness
+
+P-2-P:
+Src
+Dest
+Tags
+MPI_ANY_SOURCE
+MPI_ANY_TAG
+MPI_PROC_NULL
+
+Collectives:
+Routine Types:
+Synchronization
+Data Movement
+Global Computation
+
+Basic routines
+All variants
+Variable variants
+Initiate variants
+
+Management Routines:
+MPI_Init
+MPI_Finalize
+MPI_Abort
+MPI_Comm_size
+MPI_Comm_rank
+MPI_Get_processor_name
+MPI_Wtime
+
+P-2-P Routines:
+MPI_Send
+MPI_Recv
+MPI_Isend
+MPI_Irecv
+MPI_Sendrecv
+
+Collective Routines
+MPI_Barrier
+MPI_Bcast
+MPI_Scatter
+MPI_Gather
+MPI_Allgather
+MPI_Gatherv
+MPI_Igather
+MPI_Alltoall
+MPI_Reduce
+MPI_Scan
+MPI_Wait
+MPI_Waitall
+MPI_Type_contiguous
+MPI_Type_vector
+
+No need to memorize syntax. I'll give you what you need.
+I'm more interested in the behavior of the routine calls.
+
+Definitions/compare routine A to routine B.
+Given code skeleton, fill in different possible solutions.
+Given particular code snippets, what is the behavior?
+Have a decent working knowledge of compilable code examples.
+
