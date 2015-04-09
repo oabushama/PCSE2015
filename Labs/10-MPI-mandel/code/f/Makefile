@@ -41,8 +41,8 @@ info ::
 
 # Example: mandelbrot routines
 MANDEL_APPS = mandel_serial mandel_bulk mandel_async mandel_collective
-APPS += ${MANDEL_APPS}
-mandel_dependencies = mandel_tools.o imagetools.o Image.o
+APPS += ${MANDEL_APPS}  
+mandel_dependencies = mandel_tools.o imagetools.o  Image.o
 mandel_tools.o : Image.o
 ${MANDEL_APPS} : ${mandel_dependencies}
 APPS += ${MANDEL_APPS}
