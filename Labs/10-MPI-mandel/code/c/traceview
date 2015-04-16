@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+
+if [ -z ${MY_EXE+x} ]; then 
+  echo "MY_EXE must be set! Exiting"
+  exit -1
+fi
+
+ml reset
+ml tau
+make clean
+make ${MY_EXE}
+make idevrun EXECUTABLE=${MY_EXE}
+make tau EXECUTABLE=${MY_EXE}
+jumpshot taulog_${MY_EXE}.slog2 

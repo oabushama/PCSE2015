@@ -11,7 +11,6 @@
 ################################################################
 
 info ::
-	@echo "make"
 
 APPS = 
 
@@ -31,7 +30,7 @@ OPTLEVEL = 2
 FFLAGS = -g -O${OPTLEVEL}
 CFLAGS = ${FFLAGS} -std=c99 
 info ::
-	@echo "    [OPTLEVEL=... (default: ${OPTLEVEL})]"
+	@echo "    debug flag: DEBUG=DEBUG/OPT (default: ${DEBUG})]"
 % : %.F
 	${FC} ${FFLAGS} $*.F -o $@
 %.o : %.F90
@@ -41,24 +40,24 @@ info ::
 
 # Example: mandelbrot routines
 MANDEL_APPS = mandel_serial mandel_bulk mandel_async mandel_collective
-APPS += ${MANDEL_APPS}  
-mandel_dependencies = mandel_tools.o imagetools.o  Image.o
-mandel_tools.o : Image.o
+APPS += ${MANDEL_APPS}
+mandel_dependencies = mandel_tools.o 
+#Image.o Color.o
 ${MANDEL_APPS} : ${mandel_dependencies}
 APPS += ${MANDEL_APPS}
 Color.o : Color.h
 Image.o : Image.h
 .SECONDEXPANSION:
 ${MANDEL_APPS} : ${mandel_dependencies} $$@.o
-	${F90} ${FFLAGS} $@.o ${mandel_dependencies}  -lstdc++ -lc -o $@
+	${F90} ${FFLAGS} $@.o ${mandel_dependencies} -o $@
 # -lstdc++ -lc
 
 # rules for submitting to the queue and doing tau analysis
 info ::
 	@echo
 	@echo "make submit EXECUTABLE=<any prog> OPTIONS=<whatever>"
-EXECUTABLE = grid_blocking
-OPTIONS = pi 4 pj 6 ni 400 nj 600 it 10
+EXECUTABLE = mandel_serial
+OPTIONS = steps 100 iters 1000
 submit :
 	@export TAU_EXT=`if [ ! -z "${EXECUTABLE}" ] ; then echo "_" ; fi`${EXECUTABLE} ; \
 	export TAU_DUMP_DIR=`pwd`/tautrace$$TAU_EXT ; \
@@ -96,10 +95,9 @@ tau :
 info ::
 	@echo "make clean       : cleanup but leave slog2"
 	@echo "make total_clean : cleanup including slog2"
-#include ../../Make.inc
 clean ::
 	/bin/rm -rf *.o *~ *.gch a.out *.mod *.dSYM MULTI__* events.* \
-		idev[0-9]*.o[0-9]* ddt.o[0-9]* jobtest.o* tautrace_* \
-clean :: codeclean
+	    idev[0-9]*.o[0-9]* ddt.o[0-9]* jobtest.o* tautrace_* \
+	    ${APPS}
 total_clean : clean 
-	@/bin/rm -rf ${APPS} *.slog2 *.ppm
+	/bin/rm -rf *.slog2 *.ppm
